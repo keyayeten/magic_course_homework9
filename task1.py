@@ -22,7 +22,7 @@ class Vector2D:
         t2 = self.b - other.b
         return Vector2D(t1, t2)
 
-    def __mul__(self, other=3):
+    def __mul__(self, other):
         t1 = self.a * other
         t2 = self.b * other
         return Vector2D(t1, t2)
