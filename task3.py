@@ -9,16 +9,22 @@ class Angle():
         self.a = a
 
     def __add__(self, other):
+        if (self.a + other.a) == 180:
+            return Angle(0)
         return Angle(self.a + other.a)
 
 
     def __sub__(self, other):
-        return Angle(self.a - other.a)
+        yg = (self.a - other.a)
+        return Angle(abs(yg))
+
 
     def __repr__(self):
         return f"Angle({self.a})"
 
 ygol = Angle(130)
 ygol2 = Angle(50)
+ygol3 = Angle(10)
 print(ygol + ygol2)
-print(ygol - ygol2)
+print(ygol2 - ygol)
+print(ygol2 + ygol3)
